@@ -84,6 +84,7 @@ https://yootube.site/  /web/video/index.html 200
 https://yootube.site/watch/*  /web/video/index.html 200
 https://yootube.site/favicon.ico /web/video/favicon.ico 200
 https://yootube.site/index.css /web/video/index.css 200
+https://yootube.site/index.js /web/video/index.js 200
 https://yootube.site/js/* /web/video/js/:splat 200
 https://yootube.site/*  /web/video/index.html 200
 
