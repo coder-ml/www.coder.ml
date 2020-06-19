@@ -1,0 +1,61 @@
+{
+    "activity": {
+        "output": "&lt;p&gt;{&lt;/p&gt;&lt;p style=&quot;padding-left: 30px;&quot;&gt;&quot;activity&quot;: [&lt;/p&gt;&lt;p style=&quot;padding-left: 60px;&quot;&gt;&quot;id&quot;: int,&lt;/p&gt;&lt;p style=&quot;padding-left: 60px;&quot;&gt;&quot;prsn&quot;: int,&lt;/p&gt;&lt;p style=&quot;padding-left: 60px;&quot;&gt;&quot;type&quot;: string,&lt;/p&gt;&lt;p style=&quot;padding-left: 60px;&quot;&gt;&quot;tbl&quot;: string,&lt;/p&gt;&lt;p style=&quot;padding-left: 60px;&quot;&gt;&quot;ref&quot;: int,&lt;/p&gt;&lt;p style=&quot;padding-left: 60px;&quot;&gt;&quot;data&quot;: timestamp&lt;/p&gt;&lt;p style=&quot;padding-left: 30px;&quot;&gt;]&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;",
+        "size": "1.23kb", 
+        "rows": "45"
+    },
+    "ads": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "block": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "blogs": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "brands": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "carts": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "categories": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "interests": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "merch": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "pages": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "photo": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "playlists": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "queries": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "ratings": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "tagmap": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "tags": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "users": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "video": {
+        "size": "1.23kb", "rows": "45"
+    },
+    "zones": {
+        "size": "1.23kb", "rows": "45"
+    }
+}

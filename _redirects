@@ -1,0 +1,109 @@
+https://api.coder.ml/*  https://api-banon.herokuapp.com/*  200
+
+https://apps.coder.ml/  /web/store/index.html 200
+https://apps.coder.ml/favicon.ico /web/store/favicon.ico 200
+https://apps.coder.ml/index.css /web/store/index.css 200
+https://apps.coder.ml/index.js /web/store/index.js 200
+https://apps.coder.ml/jpurey.js /web/store/jpurey.js 200
+https://apps.coder.ml/router.js /web/store/router.js 200
+https://apps.coder.ml/*  /web/store/index.html 200
+
+https://pay.coder.ml /web/pay/index.html 200
+https://pay.coder.ml/index.css /web/pay/index.css 200
+https://pay.coder.ml/favicon.ico /web/pay/favicon.ico 200
+https://pay.coder.ml/about.html /web/pay/about.html 200
+https://pay.coder.ml/services.html /web/pay/services.html 200
+https://pay.coder.ml/payment.html /web/pay/payment.html 200
+https://pay.coder.ml/contact.html /web/pay/contact.html 200
+https://pay.coder.ml/* /web/pay/index.html 200
+
+https://cms.coder.ml /web/cms/index.html 200
+https://cms.coder.ml/index.css /web/cms/index.css 200
+https://cms.coder.ml/index.js /web/cms/index.js 200
+https://cms.coder.ml/favicon.ico /web/cms/favicon.ico 200
+https://cms.coder.ml/* /web/cms/index.html 200
+
+https://blog.coder.ml /web/blog/index.html 200
+https://blog.coder.ml/index.css /web/blog/index.css 200
+https://blog.coder.ml/index.js /web/blog/index.js 200
+https://blog.coder.ml/favicon.ico /web/blog/favicon.ico 200
+https://blog.coder.ml/cdn/js/* /web/blog/cdn/js/:splat 200
+https://blog.coder.ml/cdn/html/* /web/blog/cdn/html/:splat 200
+https://blog.coder.ml/cdn/css/* /web/blog/cdn/css/:splat 200
+https://blog.coder.ml/cdn/png/* /web/blog/cdn/png/:splat 200
+https://blog.coder.ml/cdn/svg/* /web/blog/cdn/svg/:splat 200
+https://blog.coder.ml/* /web/blog/index.html 200
+
+https://db.coder.ml /web/db/index.html 200
+https://db.coder.ml/index.css /web/db/index.css 200
+https://db.coder.ml/index.js /web/db/index.js 200
+https://db.coder.ml/:dir/* /web/db/:dir/:splat 200
+https://db.coder.ml/:file /web/db/:file 200
+
+https://ide.coder.ml/  /web/ide/index.html 200
+https://ide.coder.ml/sh.css /web/ide/sh.css 200
+https://ide.coder.ml/sh.lang.js /web/ide/sh.lang.js 200
+https://ide.coder.ml/sh.min.js /web/ide/sh.min.js 200
+https://ide.coder.ml/mvc.m.js /web/ide/mvc.m.js 200
+https://ide.coder.ml/mvc.v.js /web/ide/mvc.v.js 200
+https://ide.coder.ml/mvc.c.js /web/ide/mvc.c.js 200
+https://ide.coder.ml/firebase-app.js.map /web/ide/firebase-app.js.map 200
+https://ide.coder.ml/firebase-auth.js.map /web/ide/firebase-auth.js.map 200
+https://ide.coder.ml/index.html /web/ide/index.html 200
+https://ide.coder.ml/auth.js /web/ide/auth.js 200
+https://ide.coder.ml/event.js /web/ide/event.js 200
+https://ide.coder.ml/firebase-app.js /web/ide/firebase-app.js 200
+https://ide.coder.ml/firebase-auth.js /web/ide/firebase-auth.js 200
+https://ide.coder.ml/git.js /web/ide/git.js 200
+https://ide.coder.ml/index.js /web/ide/index.js 200
+https://ide.coder.ml/jpurey.js /web/ide/jpurey.js 200
+https://ide.coder.ml/api.js /web/ide/api.js 200
+https://ide.coder.ml/on.js /web/ide/on.js 200
+https://ide.coder.ml/router.js /web/ide/router.js 200
+https://ide.coder.ml/touch.js /web/ide/touch.js 200
+https://ide.coder.ml/index.css /web/ide/index.css 200
+https://ide.coder.ml/favicon.ico /web/ide/favicon.ico 200
+https://ide.coder.ml/*  /web/ide/index.html 200
+https://ide.coder.ml/  /web/ide/index.html 200
+
+https://raw.coder.ml/:app/*  /raw/:splat 200
+
+https://search.coder.ml /web/search/index.html 200
+https://search.coder.ml/index.css /web/search/index.css 200
+https://search.coder.ml/index.js /web/search/index.js 200
+https://search.coder.ml/* /web/search/index.html 200
+
+https://video.coder.ml/  /web/video/index.html 200
+https://video.coder.ml/watch/*  /web/video/index.html 200
+https://video.coder.ml/favicon.ico /web/video/favicon.ico 200
+https://video.coder.ml/index.css /web/video/index.css 200
+https://video.coder.ml/js/* /web/video/js/:splat 200
+https://video.coder.ml/*  /web/video/index.html 200
+
+https://yootube.site/  /web/video/index.html 200
+https://yootube.site/watch/*  /web/video/index.html 200
+https://yootube.site/favicon.ico /web/video/favicon.ico 200
+https://yootube.site/index.css /web/video/index.css 200
+https://yootube.site/js/* /web/video/js/:splat 200
+https://yootube.site/*  /web/video/index.html 200
+
+https://web.coder.ml/:app/*  /web/:app/:splat 200
+
+https://uios.ml  /web/app/uios.html 200
+https://uios.ml/index.html  /web/app/uios.html 200
+https://uios.ml/index.css /web/app/index.css 200
+https://uios.ml/index.js /web/app/index.js 200
+https://uios.ml/favicon.ico /web/app/favicon.ico 200
+https://uios.ml/manifest.json /web/app/manifest.json 200
+https://uios.ml/sw.js /web/app/sw.js 200
+https://uios.ml/cdn/* /web/app/cdn/:splat 200
+https://uios.ml/*  /web/app/uios.html 200
+
+/ /web/app/index.html 200
+/index.css /web/app/index.css 200
+/index.js /web/app/index.js 200
+/favicon.ico /web/app/favicon.ico 200
+/manifest.json /web/app/manifest.json 200
+/sw.js /web/app/sw.js 200
+/cdn/* /web/app/cdn/:splat 200
+/* /web/app/index.html 200

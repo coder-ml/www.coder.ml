@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang='en-US' title='Web IDE | Coder'><!--
+
+  --><head>
+    <title>Web IDE | Coder</title>    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="Description" content="An integrated development environment for the web and built on the JAMStack.">
+    <meta name="theme-color" content="#fff">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="canonical" href="https://coder.ml"/>
+    <link async rel="stylesheet" href="/index.css" media="all">
+    <link async rel="stylesheet" href="/sh.css" media="all">
+    <script src="/firebase-app.js"></script>
+    <script src="/firebase-auth.js"></script>
+    <script src='/jpurey.js'></script>
+    <script src='/touch.js'></script>
+    <script src='/jpurey.js'></script>
+    <script async src='/index.js'></script>
+    <script async src='/api.js'></script>
+    <script async src='/auth.js'></script>
+    <script async src='/git.js'></script>
+    <script async src='/mvc.m.js'></script>
+    <script async src='/mvc.v.js'></script>
+    <script async src='/mvc.c.js'></script>
+    <script async src='/on.js'></script>
+    <script async src='/router.js'></script>
+    <script async src='/sh.min.js'></script>
+    <script async src='/sh.lang.js'></script>
+  </head><!--
+
+  --><body id="body" data-load data-mode="dark" data-nojs onclick="event.target.id==='body' ? event.target.removeAttribute('data-contextmenu') : null" onload="on.load(window.location.pathname+window.location.hash)" onmouseleave="on.mouseleave.body()"><!--
+
+    --><noscript>
+      <div>Javascript Required</div>
+      <div>We're sorry, but this application doesn't work properly without JavaScript enabled. If you can't enable Javscript, try visiting our <a>optimized website</a></div>
+      <style>
+        body { background: #ff3b30; overflow: hidden; margin: 0; -webkit-font-smoothing: antialiased; }
+        noscript { border: 1px solid #bbb; padding: 10px; border-radius: 3px; position: absolute; top: 36px; left: 0; right: 0; bottom: 36px; width: calc(100% - 40px); height: 86px; margin: auto; background: whitesmoke; z-index: 999999999999999999999999; }
+        noscript div { height: 36px; font-weight: bolder; }
+        noscript div:first-child { line-height: calc(36px); font-family: Lato Regular; font-weight: bolder; font-size: 18px; }
+        noscript div:nth-child(2) { line-height: calc(50px/3); font-family: Lato Light; font-weight: bolder; font-size: 13px; }
+        [data-nojs] > :not(noscript) { display: none; }
+      </style>
+    </noscript>
+    
+    <a class="menu" data-before="&#x2261;" id="menu" onclick="[byId('aside')].toggleClass('show');"></a>
+    
+    <div class="avatar fixed" id="avatar"></div>
+
+    <header class="header" id="header">
+        <section id="header-section" onclick="on.mouseup.nav(event.target)" onmouseleave="on.mouseleave.header(event.target)" onmouseover="on.mouseover.nav(event.target)"><!--
+            --><div data-before="File"><section>
+                <div class="command" data-before="New repository..." data-command="init" data-after=""></div>
+                <div class="command" data-before="Add local repository..." data-after=""></div>
+                <div class="command" data-before="Clone repository..." data-after=""></div>
+                <div class="command" data-before="Options" data-after=""></div>
+                <div class="command" data-before="Exit" data-after=""></div>
+            </section></div><!--
+            --><div data-before="Edit"><section>
+                <div class="command" data-before="Undo" data-after=""></div>
+                <div class="command" data-before="Redo" data-after=""></div>
+                <div class="command" data-before="Cut" data-after=""></div>
+                <div class="command" data-before="Copy" data-after=""></div>
+                <div class="command" data-before="Paste" data-after=""></div>
+                <div class="command" data-before="Select All" data-after=""></div>
+                <div class="command" data-before="Find" data-after=""></div>
+            </section></div><!--
+            --><div data-before="View"><section>
+                <div class="command" data-before="Changes" data-after=""></div>
+                <div class="command" data-before="History" data-after=""></div>
+                <div class="command" data-before="Repository list" data-after=""></div>
+                <div class="command" data-before="Branches list" data-after=""></div>
+                <div class="command" data-before="Go to Summary" data-after=""></div>
+                <div class="command" data-before="Show stashed changes" data-after=""></div>
+                <div class="command" data-before="Toggle Fullscreen" data-after=""></div>
+                <!--<div data-before="Reset zoom" data-after=""></div>
+                <div data-before="Zoom in" data-after=""></div>
+                <div data-before="Zoom out" data-after=""></div>
+                <div data-before="Toggle developer tools" data-after=""></div>-->
+            </section></div><!--
+            --><div data-before="Repository"><section>
+                <div class="command" data-before="Push" data-after=""></div>
+                <div class="command" data-before="Pull" data-after=""></div>
+                <div class="command" data-before="Remove..." data-after=""></div>
+                <div class="command" data-before="View on GitHub" data-after=""></div>
+                <div class="command" data-before="Open in Command Prompt..." data-after=""></div>
+                <div class="command" data-before="Show in Explorer" data-after=""></div>
+                <div class="command" data-before="Open in Code Editor" data-after=""></div>
+                <div class="command" data-before="Create issue on GitHub" data-after=""></div>
+                <div class="command" data-before="Repository settings..." data-after=""></div>
+            </section></div><!--
+            --><div data-before="Branch"><section>
+                <div class="command" data-before="New branch..." data-after=""></div>
+                <div class="command" data-before="Rename..." data-after=""></div>
+                <div class="command" data-before="Delete..." data-after=""></div>
+                <div class="command" data-before="Discard all changes..." data-after=""></div>
+                <div class="command" data-before="Update from master" data-after=""></div>
+                <div class="command" data-before="Compare to branch" data-after=""></div>
+                <div class="command" data-before="Merge into current branch..." data-after=""></div>
+                <div class="command" data-before="Rebase current branch..." data-after=""></div>
+                <div class="command" data-before="Compare on GitHub" data-after=""></div>
+                <div class="command" data-before="Create pull request" data-after=""></div>
+            </section></div><!--   
+            --><div data-before="Help"><section>
+                <div class="command" data-before="Report issue..." data-after=""></div>
+                <div class="command" data-before="Contact Coder Support" data-after=""></div>
+                <div class="command" data-before="Show User Guides" data-after=""></div>
+                <div class="command" data-before="Show keyboard shortcuts" data-after=""></div>
+                <div class="command" data-before="Show logs in Explorer" data-after=""></div>
+                <div class="command" data-before="About Coder" data-after=""></div>
+            </section></div><!--
+        --></section>
+    </header>
+
+    <aside class="aside" id="aside" onclick="event.target.parentNode.className === 'section-repos' ? ('/'+event.target.parentNode.dataset.before+'/'+event.target.textContent+'/').router() : null"><!--
+        --><!--
+            --><div class="section-import import-repo"><!--
+                --><div class="filter" contenteditable id="filter-repos" placeholder="Filter"></div><!--
+                --><div class="add" data-before="Add &#x25BE;" id="repo-add" onclick="event.target.id==='repo-add' ? $(event.target).toggleClass('show') : null">
+                    <div>
+                        <div>Clone repository...</div>
+                        <div>Create new repository...</div>
+                        <div>Add existing repository...</div>
+                    </div>
+                </div><!--
+            --></div><!--
+
+            --><div class="list-repos" id="list-repos"><!--
+
+                --><section class="section-repos" data-before="coder-ml"><!--
+                    --><div>www.coder.ml</div><!--
+                --></section><!--
+
+                --><section class="section-repos" data-before="JohnRipper"><!--
+                    --><div>ChaosTheory</div><!--
+                    --><div>QuantumJump</div><!--
+                --></section><!--
+                
+                --><section class="section-repos" data-before="stuartwakefield"><!--
+                    --><div>shjs</div><!--
+                --></section><!--
+
+                --><section class="section-repos" data-before="Technetium1"><!--
+                    --><div>ChocolateyUpdate</div><!--
+                --></section><!--
+
+                --><section class="section-repos" data-before="thebanon"><!--
+                    --><div>findingyou.html</div><!--
+                --></section><!--
+
+            --></div><!--
+
+        --><section class="section-commit"><!-- 
+          --><div class="section-manage manage-repo"><!--
+            --><header><div>Changes</div><div>History</div></header><!--
+            --><footer><div data-after="0 changed files"></div></footer><!--
+          --></div><!--
+          --><section class="commit-changes"><!--
+              --><div></div><!--
+          --></section><!--
+          --><form class="commit-push"><!--
+            --><div style="white-space:nowrap;"><div class="commit-avatar" id="commit-avatar"></div><div class="summary" contenteditable="true" data-before="Summary (required)"></div></div><!--
+            --><div contenteditable="true" placeholder="Description"></div><!--
+            --><div id="commit-to-master" onclick="console.log(auth.user()); auth.user() ? event.target.nextElementSibling.click() : auth.connect()">Commit to <b>master</b></div><!--
+            --><input type="submit"><!--
+          --></form><!--
+        --></section><!--
+        --><section class="section-browse"><!--         
+          --><div class="section-browse browse-repo">Project</div><!--   
+          --><div class="browse-files" id="browse-files" onclick="on.click.browser(event);"></div><!--
+        --></section><!--
+    --></aside>
+
+    <nav class="nav" id="nav" onmouseover="on.mouseover.nav(event.target);"><!--
+        --><section class="nav-project" onclick="
+            if(GET[0]) { 
+                if(GET[1]) {
+                    if(GET[2]) {
+                        if(GET[3]) {
+                            ('/'+GET[0]+'/'+GET[1]+'/').router().then(byId('aside').classList.add('show'));
+                        } else {                    
+                            ('/'+GET[0]+'/').router().then(byId('aside').classList.add('show'));    
+                        }
+                    } else {
+                        ('/'+GET[0]+'/').router().then(byId('aside').classList.add('show'));
+                    }
+                } else {
+                    (byId('current-repository').dataset.after==='Select a repository' ? [byId('aside')].toggleClass('show') : ('/'+GET[0]+'/'+byId('current-repository').dataset.after+'/').router());
+                }
+            }
+            else { $(byId('aside')).toggleClass('show'); }
+        ">
+            <div data-before="&#x1F4D5;" data-after><header data-before="Current repository" data-after="Select a repository" id="current-repository"></header></div>
+        </section><!--
+        --><section class="nav-changes">
+            <div data-before="&#x1F333;" data-after><header data-before="Current branch" data-after="master" id="current-branch"></header></div>        
+        </section><!--
+        --><section class="nav-fetcher">
+            <div data-before="&#x1F504;"><header data-before="Fetch origin" data-after="Not fetched yet"></header></div>        
+        </section><!--
+    --></nav><!--
+        
+    --><main class="main" id="main" onclick="byId('aside').classList.contains('show') ? byId('aside').classList.remove('show') : null">
+        <section class="main-welcome"><div>        
+            <div class="welcome-banner"></div>
+            <div class="welcome-actions" data-before="No repositories found" data-after="Alternatively, you can drag and drop a local repository here to add it."><!--
+              --><div><icon data-before="&#x2795;"></icon></div><!--
+              --><div><icon data-before="&#x1F5A5;&#xFE0F;"></icon></div><!--
+              --><div><icon data-before="&#x1F4D6;"></icon></div><!--
+            --></div>
+        </div></section>
+        <section class="main-version">
+            <div class="no-local-changes">
+                <div class="message" data-before="No local changes" data-after="There are no uncommitted changes in this repository. Here are some friendly suggestions for what to do next."></div>
+                <div class="actions">
+                    <div>
+                        <div>
+                            <div>View the files of your repository in Explorer</div>
+                            <div>Repository menu or <a>Ctrl</a> <a>Shift</a> <a>F</a></div>
+                        </div>
+                        <div onclick="('/'+GET[0]+'/'+GET[1]+'/tree/'+(1>0 ? 'master' : 'master')+'/').router()">Show in Explorer</div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Open the repository page on GitHub in your browser</div>
+                            <div>Repository menu or <a>Ctrl</a> <a>Shift</a> <a>G</a></div>
+                        </div>
+                        <a id="view-on-github" href target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-wysiwyg" id="main-wysiwyg"><!--
+            --><header class="wysiwyg-header"><!--
+                --><div data-before="Preview" id="preview" onclick="on.click.preview()"></div><!--
+            --></header><!--
+            --><section class="wysiwyg-section"><div class="wysiwyg" id="wysiwyg"></div></section><!--
+        --></section>
+        <section class="main-preview" id="main-preview"><iframe class="iframe" id="iframe"></iframe></section>
+    </main>
+
+  </body>
+
+</html>

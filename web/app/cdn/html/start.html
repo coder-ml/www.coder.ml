@@ -1,0 +1,16 @@
+<div class='access' data-evt='access'>
+   <div id='fullscreen' class='fullscreen' onclick='toggleFullScreen();'></div>
+   <div id='task-manager' class='task-manager'></div>
+   <div id='volume' class='volume'></div>
+   <div id='notifications' class='notifications'></div>
+   <div id='avatar' class='avatar' onclick="openApp('settings')"></div>
+   <div id='explorer' class='explorer' onclick="openApp('ecloud')"></div>
+   <div id='settings' class='settings' onclick="openApp('settings')"></div>
+   <div id='power' class='power' onclick='byId("login").className = "login"; byId("login").className = "splash screen";  history.pushState(null, "uiOS - Login", "/login")'></div>
+</div>
+<div id='apps' class='apps' data-evt='apps' onclick='
+    if (event.target.classList.contains("app")) { app = event.target.textContent; }
+    else { app = event.target.closest(".app")[0].textContent; }
+    byId("start-menu").className = "start-menu";
+    openApp(app);
+'></div>

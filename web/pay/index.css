@@ -1,0 +1,114 @@
+a {text-decoration: none;color: inherit;}
+[data-before]:before { content: attr(data-before); }
+[data-after]:after { content: attr(data-after); }
+
+input {display: block;border:0; background: transparent; }
+
+flex, .flex { display: flex; display:-webkit-flex; }
+block, .block { display: block; }
+
+block > section { max-width:960px; margin: auto; }
+
+block header { font-size: 24px; line-height: 50px; }
+
+body {font-family: Arial;font-size: 12px;margin: 0;position: relative;background: #181a1b;color: white;top: 0;left: 0;right: 0;width: 100%;}
+body[data-nojs] > * { display: none }
+body > * { transition: 5s opacity; }
+body .loader { width: 100%; height: 100%; opacity: 1; transition: 0.3s opacity ease-out; z-index: 0; }
+body:not([data-load]) .loader { opacity: 0; }
+body .loader:before {content: '';display: block;width: 80px;height: 80px;background-image: url(/cdn/gif/loader.gif);background-position: center;background-repeat: no-repeat;background-size: contain;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;}
+body[data-load] > *:not(.loader) { opacity: 0;  }
+body[data-mode="lite"] {background: #E7E5E4;color: black;}
+body[data-mode="dark"] {background: #1A1A1A;color: #E7E5E4;}
+
+.header {background: #111;width: 100%;height: 50px;position: fixed;top: 0;left:0;right: 0;z-index: 12345;}
+body[data-mode="lite"] .header { background: #ccc; }
+.header > section {max-width: 960px;width: 100%;height: 100%;font-size: 36px;margin: auto;display: flex;align-items: center;justify-content: space-between;z-index: 123;position: relative;}
+.header .logo {width: auto;height: 50px;line-height: 50px;font-size: 24px;display: inline-block;vertical-align: top;margin-right: auto;}
+.header .logo + div {white-space: nowrap;font-size: 18px;text-align: center;line-height: 50px;font-size: 18px;display: inline-block;}
+.header .logo + div:before { display: none; }
+.header .logo + div > section > * { display: inline-block; padding: 0 10px;}
+
+
+.main {position: relative;top: 0;width: auto;padding: 50px 0;min-height: calc(100vh - 200px);z-index: 1;}
+.main > section {min-height: 100%;position: relative;display: none;}
+.main > section[data-page="/"] > * {max-width: 960px;margin: auto auto 20px;display: block;}
+.main > section[data-page="/"] > * > header {font-size: 24px;padding: 20px 20px 0;}
+.main > section[data-page="/"] > * > section {font-size: 16px;padding: 20px;}
+.main > section[data-page="/services/"] > * {max-width: 960px;margin: auto auto 20px;display: block;}
+.main > section[data-page="/services/"] > * > header { font-size: 24px; }
+.main > section[data-page="/services/"] > * > section { font-size: 16px; padding-top: 8px; }
+.main > section[data-page="/about/"] > * {max-width: 960px;margin: auto auto 20px;display: block;padding: 20px;}
+.main > section[data-page="/about/"] > * > header { font-size: 24px; }
+.main > section[data-page="/about/"] > * > section { font-size: 16px; padding-top: 8px; }
+.main > section[data-page="/payment/"] > header {width: 100%;min-height: 180px;background: #bbb;margin-bottom: 20px;}
+.main > section[data-page="/payment/"] > *:not(header) {max-width: 960px;margin: auto auto 20px;display: block;}
+.main > section[data-page="/payment/"] > * > header {padding: 0;}
+.main > section[data-page="/payment/"] > * > header > :nth-child(1) { font-size: 24px; }
+.main > section[data-page="/payment/"] > * > header > :nth-child(2) { font-size: 16px; }
+.main > section[data-page="/payment/"] > * > section {font-size: 16px;padding-top: 8px;max-width: 960px;padding: 120px 20px 20px;margin: auto auto 0;white-space: nowrap;}
+.plans-addons > * {display: inline-block;width: 86px;height: 50px;line-height: 50px;border: 1px solid;margin: auto 20px 0 0;padding: 0 20px;text-align: center;}
+body[data-page="/"] .main > section[data-page="/"],
+body[data-page="/about/"] .main > section[data-page="/about/"],
+body[data-page="/services/"] .main > section[data-page="/services/"],
+body[data-page="/payment/"] .main > section[data-page="/payment/"],
+body[data-page="/contact/"] .main > section[data-page="/contact/"]
+{ display: block; }
+
+.footer {position: relative;width: 100%;min-height: 160px;background: #111;bottom: 0;z-index: 123;white-space: normal;}
+body[data-mode="lite"] .footer { background: whitesmoke; }
+.footer section {max-width: 960px;width: 100%;margin: auto;font-size: 24px;white-space: nowrap;line-height: 60px;text-align: center;white-space: normal;}
+.footer section > * {display: inline-block;margin-right: 36px;}
+.footer section > :not(:last-child) { margin-right: 36px; }
+
+body[data-mode="dark"] .mode:before { content:'\1F31E'; display: inline-block; }
+body[data-mode="lite"] .mode:before { content:'\1F31C'; display: inline-block; }
+body[data-mode="auto"] .mode:before { content:'\1F317'; display: inline-block; }
+
+.contact-us {background : #111;margin: 10px;padding: 20px;border-radius: 10px;max-width: 480px;margin: 20px auto auto;}
+.contact-us > * {display: block;width :100%;margin: 9;} 
+.contact-us header {font-size: 24px;line-height: 48px;}
+.contact-us > *:before {display: inline-block;line-height: 36px;position: relative;left: 18px;background: #111;width: auto;padding: 0 10px;text-align: center;z-index: 1;}
+.contact-us input, .contact-us [type="select"], .contact-us textarea
+{border: 1px solid #bbb;height: 36px;line-height: 36px;width: calc(100%);border-radius: 5px;position: relative;top: -18px;background-color: transparent;}
+
+.plans-pricing {white-space: nowrap;padding-top: 20px;}
+.plans-pricing .plan {display: inline-block;white-space: normal;vertical-align: top;width: calc((100%)/2.5);width: calc((100% - 100px)/3);height: 240px;border-radius: 3px;box-shadow: 0 0 10px -3px #bbb;padding: 10px;display: inline-flex;display: inline-flex;display: -webkit-inline-flex;display: -moz-inline-flex;display: -ms-inline-flex;flex-direction: column;margin: 0 20px 0 0;}
+.plans-pricing .plan footer {background: #ff3b30;padding: 0 20px;line-height: 24px;border-radius:2px;font-size: 12px;font-weight: bolder;text-align: center;margin-top: auto;}
+
+.main > section {}
+
+@media screen and (max-width: 960px) {
+
+    .header .logo { margin-left: 10px; }
+    .header .logo + div:before { display: block; width: 50px; height: 50px; font-size: 36px; }
+
+    .main > section[data-page="/"] > * { padding: 0 0; }
+
+    .header .logo + div > * {width: 0;height: 0;overflow: hidden;transform: translate3d(100%,0,0);transition: 0.3s transform, 0.3s width;will-change: transform;} 
+    body[data-menu="true"] .header .logo + div > section {position: fixed;top: 0;right: 0;width: calc(100% - 50px);max-width: 375px;height: 100%;background: rgba(0,0,0,0.96);display: block;transform: translate3d(0%,0,0);}
+    body[data-menu="true"] header > section > :last-child:after {content: '';display: block;position: fixed;backdrop-filter: blur(10px);top: 0;left: 0;right: 0;bottom: 0;z-index: -1;}
+    .header .logo + div > section > * { width: 100%; display: block; }
+
+    .main > section[data-page="/payment/"] > *:not(header) { padding: 0 20px; }
+
+    .plans-pricing {white-space: normal;width: 640px;max-width: calc(100% - 0px);margin: auto;display: flex;flex-direction: column;}
+    .plans-pricing .plan {width: calc(100% - 60px);margin: 0 0  20px;width: auto;}
+    .plans-pricing .plan:first-child {/* display: block; */}
+
+}
+
+@media screen and (max-width: 425px) {
+
+    body[data-menu="true"] .header .logo + div > * {display: block;}
+
+}
+
+
+@media screen and (max-width: 272px) {
+
+    .logo:after { display: none; }
+
+    .plans-addons > * { display: block; margin: 20px 0 0; width: calc(100% - 40px); }
+
+}

@@ -1,0 +1,15 @@
+<div id="splash" class="splash screen" onclick="byId('splash').className = 'splash screen';  history.pushState(null, 'uiOS - Login', '/login')">
+  <div id='clock' class='clock'>
+    <div id='time' class='time'>03:08</div>
+    <div id='date' class='date'>Sunday, May 19</div>
+  </div>
+</div>
+
+<form class='signin' onsubmit='event.preventDefault(); sessionStart({log: "login", user: event.target.querySelector(".username").value, pass: event.target.querySelector(".password").value});'>
+  <div class='overflow-x'>
+    <div class='connect ui' onclick='byId("login").className = "login screen"; history.pushState(null, "uiOS - Desktop", "/desktop")'></div>
+    <a class="connect fb" href="/oauth/facebook"></a>
+    <a class="connect gg" href="/oauth/google"></a>
+    <a class="connect tt" href="/oauth/twitter"></a>
+  </div>
+</form>

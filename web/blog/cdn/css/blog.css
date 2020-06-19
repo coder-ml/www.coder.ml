@@ -1,0 +1,19 @@
+body[data-page="/blog/"] section[data-page="/blog/"] { display: block; }
+
+section[data-page="/blog/"] > header {width: 100%;height: 240px;background: #111;justify-content: center;align-items: center;flex-direction: column;}
+body[data-mode="lite"] section[data-page="/blog/"] > header { background: whitesmoke; }
+section[data-page="/blog/"] > header section {max-width: 960px;width: 100%;margin: auto auto 20px;}
+section[data-page="/blog/"] > header section > :nth-child(1) { font-size: 60px; line-height: 72px; }
+section[data-page="/blog/"] > header > :nth-child(2) { font-size: 24px; line-height: 50px; }
+
+section[data-page="/blog/"] .index-about { max-width: 960px; margin: auto; font-size: 24px; padding: 20px 0; }
+
+section[data-page="/blog/"] .blog-feed > * {width: 100%;height: auto;position: relative;}
+section[data-page="/blog/"] .blog-feed > section { max-width: 960px; margin: auto;  }
+section[data-page="/blog/"] .blog-feed > :nth-child(odd) { background: #444; }
+body[data-mode="lite"] section[data-page="/blog/"] .blog-feed > :nth-child(odd) { background: #aaa; }
+section[data-page="/blog/"] .blog-feed > :nth-child(even) { background: #333; }
+body[data-mode="lite"] section[data-page="/blog/"] .blog-feed > :nth-child(even) { background: #ddd; }
+
+section[data-page="/blog/"] .blog-feed block {  }
+section[data-page="/blog/"] .blog-feed block > section > section {font-size: 24px;line-height: 30px;max-height: 90px;overflow: hidden;}

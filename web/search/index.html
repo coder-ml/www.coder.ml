@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang='en-US' title='Search | Coder'>
+
+    <head>
+        <title>Search | Coder</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="theme-color" content="#262626">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="/index.css">
+        <script src="/firebase-app.js"></script>
+        <script src="/firebase-auth.js"></script>
+        <script src="/index.js"></script>
+        <script async src="/api.js"></script>
+        <script async src="/auth.js"></script>
+        <script async src="/jpurey.js"></script>
+        <script async src="/on.js"></script>
+        <script async src="/router.js"></script>
+        <script async src="/yt.js"></script>
+    </head>
+
+    <body id="body" data-nojs onload="on.load(window.location.host+window.location.pathname+window.location.hash+window.location.search)"><!--
+
+        --><noscript>
+            <div>Javascript Required</div>
+            <div>We're sorry, but MallZones doesn't work properly without JavaScript enabled. If you can't enable Javscript, try visiting our <a>optimized website</a></div>
+            <style>
+                body { background: #1a1a1a; overflow: hidden; margin: 0; -webkit-font-smoothing: antialiased; }
+                noscript { border: 1px solid #bbb; padding: 10px; border-radius: 3px; position: absolute; top: 36px; left: 0; right: 0; bottom: 36px; width: calc(100% - 40px); height: 86px; margin: auto; background: whitesmoke; z-index: 123456789; }
+                noscript div { height: 36px; font-weight: bolder; }
+                noscript div:first-child { line-height: calc(36px); font-family: Lato Regular; font-weight: bolder; font-size: 18px; }
+                noscript div:nth-child(2) { line-height: calc(50px/3); font-family: Lato Light; font-weight: bolder; font-size: 13px; }
+                [data-nojs] > :not(noscript) { display: none; }
+            </style>
+        </noscript><!--
+
+        --><header class="header" id="header"><!--
+            --><div class="icon" id="icon" data-before="&#x1F575;&#xFE0F;" data-after="Search"></div><!--
+            --><form class="search" id="search" onsubmit="on.submit.search(event);">
+                <input type="text" placeholder="Search...">
+                <input type="button" value="&#x1F399;&#xFE0F;">
+                <input type="submit" value="&#x1F50D;">
+            </form><!--
+            --><div class="more" data-before="&#x22EE;&#x22EE;&#x22EE;" id="more"></div><!--
+            --><div class="user" id="user"></div><!--
+        --></header><!--
+
+        --><nav class="nav" id="nav">
+            <section>
+                <div data-before="&#x1F50D; All"></div>
+                <div data-before="&#x1F4F0; Blogs"></div>
+                <div data-before="&#x1F3F7;&#xFE0F; Merch"></div>
+                <div data-before="&#x1F5BC;&#xFE0F; Photo"></div>
+                <div data-before="&#x25B6; Video"></div>
+                <div data-before="&#x22EE; More">
+                    <section>
+                        <div data-before="&#x1F5FA;&#xFE0F; Maps"></div>
+                        <div data-before="&#x1F3B5; Audio"></div>
+                        <div data-before="&#x2708;&#xFE0F; Flights"></div>
+                        <div data-before="&#x1F4C8; Finance"></div>
+                    </section>
+                </div>
+                <div data-before="Settings"></div>
+                <div data-before="Tools"></div>                
+            </section>
+        </nav><!--
+
+        --><main class="main" id="main"><!--
+
+            --><section data-page="/"><!--
+
+                --><block class="block image-wall">
+                        <div class="photo-mosaic" id="photo-mosaic">
+                            <section>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                            </section>
+                            <section>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                            </section>
+                            <section>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                            </section>
+                            <section>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                            </section>
+                            <section>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                            </section>
+                            <section>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                                <picture></picture>
+                            </section>
+                        </div>
+                </block><!--
+
+                --><block class="block latest-videos" data-before="Top Blogs">
+                    <footer>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">theringer</div>
+                                <header>DaBaby Needs to Stop Reading His Damn Mentions</header>
+                                <footer>1 day ago</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">yahoo! sports</div>
+                                <header>DaBaby Talks New Album 'Blame It on Baby', Working With NBA YoungBoy & Staying Creating During Quarantine | BillBoard</header>
+                                <footer>3 hours ago</footer>
+                            </article>
+                        </media>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">billboard</div>
+                                <header>DaBaby Eyeing Second No. 1 Album on Billboard 200 Chart</header>
+                                <footer>2 days ago</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">hotnewhiphop</div>
+                                <header>DaBaby Reveals How Much Money He's Losing During Quarantine</header>
+                                <footer>10 hours ago</footer>
+                            </article>
+                        </media>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">hypebeast</div>
+                                <header>DaBaby Projected to Dethrone the Weeknd on Billboard 200 Chart</header>
+                                <footer>2 days ago</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">uproxx</div>
+                                <header>DaBaby Shifts Toward The Center On The Divisive "Blame It On Baby"</header>
+                                <footer>1 day ago</footer>
+                            </article>
+                        </media>
+                    </footer>
+                </block><!--
+
+                --><block class="block latest-videos" data-before="New Products">
+                    <footer>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">theringer</div>
+                                <header>DaBaby Needs to Stop Reading His Damn Mentions</header>
+                                <footer>1 day ago</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">yahoo! sports</div>
+                                <header>DaBaby Talks New Album 'Blame It on Baby', Working With NBA YoungBoy & Staying Creating During Quarantine | BillBoard</header>
+                                <footer>3 hours ago</footer>
+                            </article>
+                        </media>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">billboard</div>
+                                <header>DaBaby Eyeing Second No. 1 Album on Billboard 200 Chart</header>
+                                <footer>2 days ago</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">hotnewhiphop</div>
+                                <header>DaBaby Reveals How Much Money He's Losing During Quarantine</header>
+                                <footer>10 hours ago</footer>
+                            </article>
+                        </media>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">hypebeast</div>
+                                <header>DaBaby Projected to Dethrone the Weeknd on Billboard 200 Chart</header>
+                                <footer>2 days ago</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">uproxx</div>
+                                <header>DaBaby Shifts Toward The Center On The Divisive "Blame It On Baby"</header>
+                                <footer>1 day ago</footer>
+                            </article>
+                        </media>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">theringer</div>
+                                <header>DaBaby Needs to Stop Reading His Damn Mentions</header>
+                                <footer>1 day ago</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">yahoo! sports</div>
+                                <header>DaBaby Talks New Album 'Blame It on Baby', Working With NBA YoungBoy & Staying Creating During Quarantine | BillBoard</header>
+                                <footer>3 hours ago</footer>
+                            </article>
+                        </media>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">billboard</div>
+                                <header>DaBaby Eyeing Second No. 1 Album on Billboard 200 Chart</header>
+                                <footer>2 days ago</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">hotnewhiphop</div>
+                                <header>DaBaby Reveals How Much Money He's Losing During Quarantine</header>
+                                <footer>10 hours ago</footer>
+                            </article>
+                        </media>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">hypebeast</div>
+                                <header>DaBaby Projected to Dethrone the Weeknd on Billboard 200 Chart</header>
+                                <footer>2 days ago</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <div class="source">uproxx</div>
+                                <header>DaBaby Shifts Toward The Center On The Divisive "Blame It On Baby"</header>
+                                <footer>1 day ago</footer>
+                            </article>
+                        </media>
+                    </footer>
+                </block><!--
+
+                --><block class="block latest-videos" data-before="Latest Videos">
+                    <footer id="latest-videos">
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <header>DaBaby - BOP on Broadway (Hip Hop Musical)</header>
+                                <footer>Nov 15, 2019</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <header>DaBaby - Find My Way (Official Music Video)</header>
+                                <footer>April 1, 2019</footer>
+                            </article>
+                        </media>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <header>DaBaby - Suge (Yea Yea) Official Music Video</header>
+                                <footer>Nov 15, 2019</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <header>DaBaby - "JUMP" feat NBA Youngboy (Official Video)</header>
+                                <footer>7 days ago</footer>
+                            </article>
+                        </media>
+                        <media>
+                            <picture></picture>
+                            <article>
+                                <header>DaBaby - VIBEZ (Official Music Video)</header>
+                                <footer>Nov 15, 2019</footer>
+                            </article>
+                        </media><!--
+                        --><media>
+                            <picture></picture>
+                            <article>
+                                <header>DaBaby - Shut Up (Official Music Video)</header>
+                                <footer>February 26, 2020</footer>
+                            </article>
+                        </media>
+                    </footer>
+                </block><!--
+
+            --></section><!--
+
+            --><section data-page="/search/#/"><!--
+            --></section><!--
+            
+        --></main>
+
+    </body>
+
+</html>

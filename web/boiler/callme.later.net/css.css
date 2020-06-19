@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+/* Smooth scroll for the services and about tab */
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  width: 100%;
+  position: relative;
+  background: rgb(46, 42, 42);
+  color: white;
+  font-family: Arial;
+}
+
+/* Nav Bar */
+
+a {
+  margin: 15px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header a:hover {
+color: #000;
+background: #ddd;
+
+}
+.header{position:fixed;overflow:hidden;top: 0;background-color: rgba(57, 191, 147, 0.96);width: 100%;height: 50px;}
+.header .section { width: 100%;display: flex; display: -webkit-flex; display: -moz-flex; display: -ms-flex; height: 100%; justify-content: center;align-items: center;flex-direction: row;flex-wrap: wrap; }
+.header .section > :first-child { margin-right: auto; }
+
+
+.main {margin-top: 50px;width: 100%;min-height: calc(100vh - 120px);display: flex; }
+.main .wrapper { width: 100%; }
+.main .wrapper:empty {text-align: center;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+.main .wrapper:empty:before { content: '\1F6A7'; display: block; font-size: 72px; }
+.main .wrapper:empty:after { content: 'UNDER CONSTRUCTION'; display: block; line-height: 50px; font-weight: bolder; }
+
+
+.footer {width: 100%;min-height: 240px;background: white;}
+
+h1
+{
+  font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+p{
+  font-size: 24px;
+  line-height: 50px;
+   }

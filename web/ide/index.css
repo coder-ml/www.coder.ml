@@ -1,0 +1,232 @@
+::-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px rgba(255,59,48,1.5) inset;-webkit-box-shadow: none;}
+::-webkit-scrollbar {width: 0px;height: 0px;border-radius: 8px;background: trans;border-radius: 0px;}
+::-webkit-scrollbar-thumb {width: 0px;height: 0px;border-radius: 8px;background: rgb(0,0,0,0.5);}
+::-webkit-scrollbar-button {height: 0;width: 0;border-radius: 10px;}
+
+@keyframes blur {
+  from {backdrop-filter: blur(0);}
+  to {backdrop-filter: blur(10px); }
+}
+
+a { color: inherit; text-decoration: unset; }
+
+.bkg.cvr { background-size: cover;. }
+
+body {background: #1a1a1a;color:#fff;display: flex;font-family:Arial;justify-content: center;align-items: center;margin: 0;width: 100%;height: 100%;position: fixed;overflow: hidden;top: 0;left: 0;right: 0;bottom: 0;}
+body > * { display: none; user-select: none; }
+body:before {content: 'FHD (3840x2160) is the maximum supported resolution.';display: block;font-size: 14px;color: #fff;font-size: 72px;text-align: center;max-width: calc(100% - 40px);}
+
+@media screen and (max-width: 3840px) {
+
+    body {display: block;}
+    body:before { display: none; }
+    body[data-contextmenu]:after {content: '';display: block;backdrop-filter: blur(10px);position: fixed;top: 0;left: 0;right: 0;bottom: 0;width: 100%;height: 100%;z-index: 12345;animation: 1s blur;}
+    body > * { display: block; }
+  
+    body > a {position: fixed;top: 0;left: 0;width: 36px;height: 36px;line-height: 36px;text-align: center;font-size: 18px;display: none;}
+    
+    body > .avatar {top: 6px;right: 6px;position: fixed;z-index: 12345;width: 24px;height: 24px;border-radius: 50%;}
+    body > .avatar > * {width: 100%; height: 100%; border-radius: 50%; background-color: #111; }
+     
+    body > header {box-shadow: 0 5px 5px -5px #000;width: 100%;height: 36px;position: fixed;top: 0;left: 0;right: 0;z-index: 123456;white-space: nowrap;overflow-y: hidden;/* background: #1a1a1a; */}
+    body > header > section {display: inline-block;position: relative;width: 425px;display: flex;}
+    body > header[data-handler] {height: 100%;z-index: 1234567;}
+    body > header > section > a {width: 36px;height: 36px;font-size: 24px;line-height: 36px;text-align: center;display: inline-block;vertical-align: middle;display: none;}
+    body > header > section > div {display: inline-block;vertical-align: middle;height: 36px;line-height: 36px;padding: 0 10px;overflow: visible;text-align: center;flex: 1;}
+
+    body > header[data-handler]:after {content: '';display: block;backdrop-filter: blur(10px);position: fixed;left: 0;right: 0;bottom: 0;width: 100%;height: calc(100% - 36px);z-index: -1;}
+    body > header > section > div.shows,
+    body > header[data-handler="File"] > section > [data-before="File"],
+    body > header[data-handler="Edit"] > section > [data-before="Edit"],
+    body > header[data-handler="View"] > section > [data-before="View"],
+    body > header[data-handler="Repository"] > section > [data-before="Repository"],
+    body > header[data-handler="Branch"] > section > [data-before="Branch"],
+    body > header[data-handler="Help"] > section > [data-before="Help"] { background:#333; }   
+    body > header > section > div.show > sections,
+    body > header[data-handler="File"] > section > [data-before="File"] > section ,
+    body > header[data-handler="Edit"] > section > [data-before="Edit"] > section ,
+    body > header[data-handler="View"] > section > [data-before="View"] > section ,
+    body > header[data-handler="Repository"] > section > [data-before="Repository"] > section ,
+    body > header[data-handler="Branch"] > section > [data-before="Branch"] > section ,
+    body > header[data-handler="Help"] > section > [data-before="Help"] > section {display: block;} 
+    body > header > section > div > section {display: none;}
+    body > header > section > div > section {position: absolute;z-index: 123;width: 240px;height: auto;max-height: calc(100vh - 100px);background: #333333;right: 0;margin: auto;top: 36px;overflow-x: hidden;display: none;}
+    body > header > section > div > section > div {display: block;padding: 0 20px;line-height: 50px;font-size: 13px;text-align: left;}
+
+    .nav {background: #111;width: 100%;height: 50px;position: absolute;top: 36px;left: 0;right: 0;z-index: 122;white-space: nowrap;overflow-y: hidden;}
+    .nav > section { display: inline-block; vertical-align: middle; }
+    .nav > section {min-width: 320px;max-width: calc(100% - 75px);height: auto;box-shadow: 5px 0 5px -5px #000;/* border-right: 1px solid #000; */}
+
+    .nav-project {box-shadow: inset -5pc 0 5pc -5pc black !important;}
+    
+    .nav > section > div {width: 100%;position: relative;height: auto;white-space: nowrap;display: flex;justify-content: left;background: #111;}
+    .nav > section > div[data-before]:before { display: inline-block;vertical-align: middle;text-align: center;width: 50px;height: 50px;line-height: 50px;}
+    .nav > section > div[data-after]:after { font-size:18px;display: inline-block;vertical-align: middle;text-align: center;width: 50px;height: 50px;line-height: 50px;}
+    .aside + .nav > section > div[data-after]:after {content: '\25BE'; }
+    .nav > section > div > header {display: inline-flex;flex-direction: column;justify-content: center;vertical-align: middle;line-height: 18px;width: calc(100% - 100px);}
+    .nav > section > div > header:before { color: #777; }
+    body:not([data-repo]) .nav .nav-changes, body:not([data-repo]) .nav .nav-fetcher { display: none; }
+
+    body[data-path="/"] .aside:not(.show), 
+    body[data-path="/"] .aside:not(.show) ~ .import-repo, 
+    body[data-path="/"] .aside:not(.show) ~ main > :not(:last-child) {/* display: none; */}
+    .aside {position: absolute;bottom: 0;width: 320px;overflow-x: hidden;height: calc(100% - 86px);z-index: 123456;overflow: visible;background: #222222;box-shadow: inset -5pc 0 5pc -5pc #000;transition:0.3s transform;}
+    .aside > section:before { font-weight: bolder; }
+    .aside .section-repos {padding: 10px;line-height: 36px;}
+    .aside .section-repos > *:before { content: '\1F513'; width: 36px; padding-right: 10px; }
+    .aside > .section-repos > *:after { content: '\2B24'; color: #0077ff; width: 36px; padding-left: 10px; position: absolute; right: 0; }
+
+    body[data-repo] .import-repo,
+    body[data-branch] .manage-repo,
+    body:not([data-repo]) .aside.show .section-explorer,
+    body:not([data-repo]) .aside .section-explorer,
+    body[data-repo] .aside .section-repos,
+    body:not([data-repo]) .aside .section-browse,
+    body:not([data-repo]) .aside .section-commit { display: none; }
+
+    .import-repo {white-space: nowrap;width: auto;height: 60px;text-align: left;position: absolute;top: 0;width: 100%;z-index: 123;}
+    .import-repo > * { display: inline-block; vertical-align: middle; }
+    .import-repo .filter {line-height: 36px;background: #111;border: 1px solid black;border-radius: 3px;padding: 0 10px;margin: 10px;width: calc(100% - 122px);text-align: left;}
+    .import-repo .add {line-height: 36px;background: #333;border: 1px solid black;border-radius: 3px;padding: 0 10px;margin: 10px 10px 10px 0;width: 48px;text-align: center;position: relative;}
+    .import-repo .add > * {display: none;z-index: 1;}
+    .import-repo .add.show > * { display: inline-block; }
+    .import-repo .add.show > div {position: absolute;top: 50%;left: 50%;background: #1d1c1c;padding: 0 10px;border: 1px solid #333;z-index: 123456;}
+    .import-repo .add.show:after {content: '';display: block;width: 100%;height: 100%;position: fixed;position: fixed;top: 0;left: 0;backdrop-filter: blur(10px);z-index: 0;z-index: 123;}
+ 
+    .list-repos {white-space: nowrap;width: auto;height: calc(100% - 60px);text-align: left;position: absolute;top: 60px;width: 100%;overflow-x: hidden;}
+
+    body[data-repo][data-branch] .browse-repo {white-space: nowrap;width: 320px;height: 50px;font-weight: bolder;line-height: 50px;text-align: center;position: relative;left: 0;z-index: 123;background: #333;box-shadow: inset -5pc 0 5pc -5pc #000;}
+
+    body[data-repo][data-branch] .wysiwyg-header {line-height: 50px;font-weight: bolder;background: #222;position: absolute;z-index: 123;width: 100%;height: 50px;}
+    body[data-repo][data-branch] .wysiwyg-header > * {line-height: 50px;width: 52px;height: 50px;padding: 0 10px;text-align: center;display: inline-block;box-shadow: 5px 0 5px -5px #000;}
+    body[data-repo][data-branch] .wysiwyg-header > *:last-child { box-shadow: none; }
+    
+    .manage-repo > * {line-height: 30px;text-align: center;font-size: 13px;width: 100%;margin: auto;}
+    body[data-repo]:not([data-branch]) .manage-repo {white-space: nowrap;width: 320px;height: auto;position: relative;left: 0;z-index: 123;background: #333;box-shadow: inset -5pc 0 5pc -5pc #000;}
+    body:not([data-branch]) .browse-repo,
+    body:not([data-repo]) .manage-repo { display: none; }
+    .manage-repo header > * {width: 50%;display: inline-block;}
+    
+    .main {width: calc(100% - 320px);height: calc(100% - 86px);position: absolute;z-index: 1;bottom: 0;right: 0;overflow: visible; transition:0.3s width;}
+    body[data-path="/"] .aside:not(.show) ~ main {/* width: 100%; */}
+    .main > section {width: 100%;height: 100%;line-height: 36px;overflow-x: hidden;position: absolute;background: #1a1a1a;z-index: 123;bottom: 0;}
+ 
+    section.main-preview.show {z-index: 1234566;height: calc(100% - 50px);}
+    section.main-preview iframe {width: 100%;height: 100%;border: 0;}
+
+    .section-commit, .section-browse {top: 0;left: 0;right: 0;bottom: 0;width: 100%;height: 100%;position: absolute;}
+    body[data-branch] .section-commit, body:not([data-branch]) .section-browse { display: none; }
+    .section-commit .commit-changes {width: 100%;height: calc(100% - 300px);overflow-x: hidden;}
+    .section-commit .commit-push {bottom: 0;position: absolute;width: 100%;height: 240px;margin: 0;display: flex;flex-direction: column;}
+    .section-commit .commit-push > :nth-child(1) {height: 41px;}
+    .section-commit .commit-push > :nth-child(2) {margin: 10px;padding: 10px;display: inline-block;width: calc(100% - 40px);height: 100%;background: #111111;font-size: 13px;}
+    .section-commit .commit-push .summary:focus, .section-commit .commit-push > :nth-child(2):focus { outline: #0077ff solid 1px; }
+    .section-commit .commit-push > :nth-child(3) {margin: 0 10px 10px;border: 1px solid #000;padding: 0px;display: inline-block;width: calc(100% - 22px);height: 30px;background: #0077ff;text-align: center;line-height: 30px;}
+    .section-commit .commit-push .commit-avatar {width: 30px;height: 30px;margin: 10px 10px 0 10px;display: inline-block;background: #111;border-radius: 3px;overflow: hidden;}
+    .section-commit .commit-push .commit-avatar > * { width: 100%; height: 100%;  }
+    .section-commit .commit-push .commit-avatar:empty:before { content: '\1F464'; text-align: center; line-height: 30px; display: block; }
+    .section-commit .commit-push .summary {width: calc(100% - 80px);font-size: 13px;height: 30px;margin: 10px 10px 0 0;line-height: 30px;display: inline-block;background: #111;border-radius: 3px;vertical-align: top;padding: 0 10px;}
+    .section-commit .commit-push input[type="submit"] { display: none; }
+
+    .section-browse .browse-files {width: 100%;height: calc(100% - 50px);overflow-x: hidden;}
+    .browse-files:not([data-path="/"]):before {content: '..';display: block;width: auto;height: 36px;line-height: 24px;padding: 0 10px;font-weight: bolder;font-size: 18px;}
+    .section-browse .browse-files > * {width: auto;height: auto;line-height: 36px;padding: 0 10px;}
+    .section-browse .browse-files > [data-type="dir"]:before { content: '\1F4C1'; }
+    .section-browse .browse-files > [data-type="file"]:before { content: '\1F4C4 '; }
+    .section-browse .browse-files > :before { margin-right: 10px; }
+
+    body:not([data-repo]) aside ~ .main > section.main-welcome {display: flex;z-index: 12345;background: #1a1a1a;justify-content: center;align-items: center;}
+    body:not([data-repo]) aside ~ .main > section.main-welcome > div {width: 100%;max-height: 100%;position: relative;}
+    .main-welcome .welcome-banner {width: 100%;height: 160px;max-height: 50%;display: none;}
+    .main-welcome .welcome-actions {text-align: center;width: 100%;}
+    .main-welcome .welcome-actions:before  {width: 100%;display: block;text-align: center;font-weight: bolder;line-height: 72px;font-size: 18px;white-space:pre;}
+    .main-welcome .welcome-actions:after {width: 100%;display: block;max-width: calc(100% - 100px);width: 640px;text-align: center;margin: 50px auto;}
+    .main-welcome .welcome-actions > div {display: inline-block;vertical-align: top;width: calc(100%/3);max-width: 240px;text-align: center;white-space: normal;font-size: 13px;line-height: 18px;margin: 72px 20px 36px;}
+    .main-welcome .welcome-actions > div { width: 100%; position: relative; }
+    .main-welcome .welcome-actions > div icon {position: absolute;top: -60px;left: 0;right: 0;font-size: 30px;height: 60px;line-height: 60px;text-align: center;}
+    .main-welcome .welcome-actions > div:before {font-size: 13px;line-height: 18px;}
+    .main-welcome .welcome-actions > div:before, .main-welcome .welcome-actions > div:after {white-space: pre-wrap;display: inline-block;padding: 3px 10px;border-radius: 3px;}
+    .welcome-actions > :nth-child(1):before { content: 'Create a new project and publish it to GitHub \A\A' !important; white-space: pre;  }
+    .welcome-actions > :nth-child(2):before { content: 'Add an existing project on your computer and publish it to GitHub \A\A' !important; white-space: pre;  }
+    .welcome-actions > :nth-child(3):before { content: 'Clone an existing project from GitHub to your computer \A\A' !important; white-space: pre;  }
+    .welcome-actions > :nth-child(1):after {content: 'Create new repository' !important;white-space: pre;display: inline-block;border-radius: 3px;border: 1px solid black;}
+    .welcome-actions > :nth-child(2):after { content: 'Add a local repository' !important; white-space: pre;  }
+    .welcome-actions > :nth-child(3):after { content: 'Clone a repository' !important; white-space: pre;  }
+    .welcome-actions > :after {background: #333;border-radius: 3px;border: 1px solid black;}
+
+    .main-version { display: flex; justify-content: center; align-items: center; }
+    .main-version > * {width: 640px;height: auto;margin: 20px 72px auto;padding: 40px;}
+    body[data-repo]:not([data-branch]) .main-version { z-index: 12345; }
+    body[data-repo] .main-version:empty { display: flex; justify-content: center; align-items: center; }
+    body[data-repo] .main-version:empty:before { content:'Version Control'; padding: 10px; line-height: 36px; display: block; font-weight: bolder; font-size: 24px; }
+    .main-version .no-local-changes .message:before {display: block;font-size: 36px;}
+    .main-version .no-local-changes .message:after {display: block;margin: 0 0 72px;line-height: 24px;padding: 18px 0;}
+    .main-version .no-local-changes .actions { border: 1px solid black; border-radius: 5px; }
+    .main-version .no-local-changes .actions > * {padding: 20px;display: flex;flex-direction: row;align-items: center;justify-content: space-between;}
+    .main-version .no-local-changes .actions > *:first-child { border-bottom: 1px solid black; }
+    .main-version .no-local-changes .actions > * > :last-child { border: 1px solid #000; padding: 0 10px; border-radius: 3px; background: #222; }
+
+    .main-wysiwyg {white-space: pre-wrap;}
+    body[data-branch] .main-wysiwyg { z-index: 12345; }
+    .main-wysiwyg .wysiwyg-section {width: calc(100% - 72px);width: 100%;height: calc(100% - 50px);line-height: 24px;/* margin: 0 10px 0 72px; */position: absolute;overflow-x: hidden;bottom: 0;/* border-left: 1px solid #333; */overflow: auto;padding: 0;margin: 0;}
+    .wysiwyg-section > .wysiwyg {/* background-image: repeating-linear-gradient(transparent 0px, transparent 24px, #777 25px); */line-height: 30px;min-width: calc(100% - 40px);min-height: calc(100% - 40px);white-space: pre;width: auto;display: inline-block;text-indent: 30px;position: relative;}
+    .wysiwyg-section > .wysiwyg > code { display: block; }
+    .wysiwyg-section > .wysiwyg > code:before {  }
+
+}
+
+@media screen and (max-width: 960px) {
+
+    .aside { transform: translate3d(-100%,0,0); }
+    .aside.show { transform: translate3d(0,0,0); }
+    .main { width: 100%; }
+    .aside.show ~ main:after {content: '';display: block;width: 100%;height: 100%;background: rgba(0,0,0,0.5);position: fixed;z-index: 123456789;top: 0;left: 0;right: 0;bottom: 0;backdrop-filter: blur(10px);}
+    body > header > a { width: 36px; height: 36px; font-size: 24px; line-height: 36px; text-align: center; display: inline-block; vertical-align: middle; }
+    body > header section > a {display: block;flex: 1;}
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .main-version .no-local-changes .actions > div { flex-direction: column; }
+    .main-version .no-local-changes .actions > div > :first-child {margin: 0 0 20px;text-align: center;font-size: 13px;line-height: 24px;}
+    .main-version .no-local-changes .actions > div > :first-child > :first-child { font-weight: bolder; }
+    .main-version .no-local-changes .actions > div > :first-child > :last-child a { border: 1px solid black; border-radius:3px; padding: 2px 4px; }
+
+}
+
+@media screen and (max-width: 425px) {
+    
+    body > header > section {/* width: auto; */height: 100%;overflow-y: hidden;}
+    body > header > section > div > section {/* position: fixed; */}
+
+}
+
+
+@media screen and (max-width: 375px) {
+
+    .nav > section { min-width: 320px; }
+    .aside, body[data-repo]:not([data-branch]) .manage-repo {width: 100%;max-width: 320px; }
+    
+}
+
+@media screen and (max-width: 360px) {
+
+    .nav > section { min-width: 240px; }
+    .aside, body[data-repo]:not([data-branch]) .manage-repo {max-width: 240px;}
+
+}
+
+@media screen and (max-width: 319px) {
+
+    body { display: flex; display: -webkit-flex; display: -moz-flex; display: -ms-flex; justify-content: center; align-items: center; }
+    body > * { display: none; }
+    body:before {content: 'QVGA (320x240) is the minimum supported resolution.';width: 640px;font-size: 24px;display: block;}
+    
+}
+
+:focus { outline: none; }
+[data-after]:after { content: attr(data-after); }
+[data-before]:before { content: attr(data-before); }
+[placeholder]:not(input):empty:before {content: attr(placeholder);opacity: 0.5;} 
+

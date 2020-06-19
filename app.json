@@ -1,0 +1,19 @@
+{
+  "addons": [
+    "jawsdb"
+  ],
+  "buildpacks": [
+
+  ],
+  "env": {
+    "JAWSDB_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "name": "api",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang='en-US' title='CallMe'><!--
+
+  --><head>
+    <title>CallMe</title>    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="Description" content="A boilerplate library for web development.">
+    <meta name="theme-color" content="#fff">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="canonical" href="https://callme.coder.ml"/>
+    <link async rel="stylesheet" href="/index.css" media="all">
+    <script id="jpurey">
+    Element.prototype.find = function(elem) { return this.querySelector(elem); };
+    window.all = function(str) { return document.querySelectorAll(str); };
+    window.byId = s => { return document.getElementById(s); }
+    Element.qs = s => { return document.querySelector(s); }
+    window.$ = obj => { return (typeof obj === 'object') ? (NodeList.prototype.isPrototypeOf(obj)) ? [].slice.call(obj) : (Element.prototype.isPrototypeOf(obj) ? [obj] : null) : (typeof obj === 'string' ? [].slice.call(obj) : null); }
+    function ajax(url, settings) { //console.log(url,settings);
+      return new Promise((resolve, reject) => { var req;
+        if(settings && settings.dataType === 'POST') { req = new Request(url, { method: 'POST', body: (settings.data ? JSON.stringify(settings.data) : null), headers: new Headers() }); } else { req = url; }
+        fetch(req).then(response => response.text()).then(res => { try { resolve(res); } catch(e) { resolve(e); } });
+      });
+    }
+    </script>
+    <script id="router">
+    String.prototype.router = function(a, b=a ? a : {}, pop=b.pop ? b.pop : null, path=this.valueOf().replace(/\/?$/, '/')) { //window.location.href = state;
+      return new Promise(function(resolve, reject) {
+        path ? view(route(path)).then(paths => load(paths).then(paths => resolve(paths), err => reject(err))) : reject({error:error["404"]});
+      });
+    };
+    function view(paths) {
+      return new Promise(function(resolve, reject) {
+        var get = paths.GOT, root = paths.GOT[0];
+        document.body.removeAttribute('data-menu');
+        if(root) {
+          ajax('/'+root+'.html').then(html => {
+            //var page = byId('main').querySelector('[data-page="'+paths.page+'"]');
+            //page.innerHTML = html;
+            if(root === 'about') { }
+            else if(root === 'services') { }
+            else if(root === 'payment') { }
+            else if(root === 'contact') { }
+          });
+          resolve(paths);
+        }
+        else { resolve(paths); }
+      });
+    }
+    function load(paths) {
+      return new Promise(function(resolve, reject) {
+        document.body.dataset.page = paths.page;
+        document.body.dataset.path = paths.path;
+        history.pushState(paths.state,'uiOS',paths.state);
+        window.GET = paths.GOT;
+        resolve(paths);
+      });
+    }
+    window.route = state => { 
+      var GOT = state===window.location.origin ? [] : routes.dir(state);
+      var n = 0, arr1 = [], arr2 = [], view = GOT && GOT[0] ? GOT[0] : '/'; 
+      if(GOT.length>0) {
+        do { var m = GOT[n];
+          if(m.includes('#')) { 
+            arr1[n] = '*';
+            arr2[n] = m.replace("*",''); 
+          }
+          else { arr1[n] = arr2[n] = m; }
+        n++; } while(n<GOT.length);
+      }
+      return {GOT:arr2, page:routes.url(arr1), path:routes.url(routes.dir(state.replace('#',''))), state};
+    }
+    window.routes = {
+      dir: (url,g=[]) => {
+        url.split('/').forEach((a,i) => { g[i] = a; }); 
+        g[0] === "" ? g.shift() : null; g[g.length - 1] === "" ? g.pop() : null; return g; 
+      },
+      url: dir => { return dir.length === 0 ? '/' : '/'+dir.join('/')+'/'; }      
+    }
+    </script>
+    <script id='load'>
+    window.version = 1;
+    window.addEventListener("popstate", e => (e.state ? e.state.router({pop:true}) : null));
+    window.init = url => {
+        console.log({mode:localStorage.mode});
+        document.body.removeAttribute('data-nojs');
+        window.dom = { 
+          "header": byId('header'), 
+          "main": byId('main'),
+          "blogs": byId('blogs')
+        };
+        url.router().then(document.body.removeAttribute('data-load'));
+    };
+    window.is = {
+      mobile: () => { 
+        var ua = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        ua ? document.body.dataset.mobi=true : document.body.dataset.mobi ? document.body.removeAttribute('data-mobi') : null; 
+        return ua;
+      },
+    };
+    </script>
+    <style id="style">
+    ::-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px rgba(255,59,48,1.5) inset;-webkit-box-shadow: none;}
+    ::-webkit-scrollbar {width: 16px;height: 16px;border-radius: 10px;background: #777;border-radius: 0px;}
+    ::-webkit-scrollbar-thumb {width: 16px;height: 16px;border-radius: 0px;background: #333;}
+    ::-webkit-scrollbar-button {height: 0;width: 0;border-radius: 10px;}
+    </style>
+  </head><!--
+
+  --><body id="body" data-load data-mode="dark" data-page="/" data-path="/" data-nojs onload="init(window.location.pathname+window.location.hash)"><!--
+
+    --><noscript>
+      <div>Javascript Required</div>
+      <div>We're sorry, but this application doesn't work properly without JavaScript enabled. If you can't enable Javscript, try visiting our <a>optimized website</a></div>
+      <style>
+        body { background: #ff3b30; overflow: hidden; margin: 0; -webkit-font-smoothing: antialiased; }
+        noscript { border: 1px solid #bbb; padding: 10px; border-radius: 3px; position: absolute; top: 36px; left: 0; right: 0; bottom: 36px; width: calc(100% - 40px); height: 86px; margin: auto; background: whitesmoke; z-index: 999999999999999999999999; }
+        noscript div { height: 36px; font-weight: bolder; }
+        noscript div:first-child { line-height: calc(36px); font-family: Lato Regular; font-weight: bolder; font-size: 18px; }
+        noscript div:nth-child(2) { line-height: calc(50px/3); font-family: Lato Light; font-weight: bolder; font-size: 13px; }
+        [data-nojs] > :not(noscript) { display: none; }
+      </style>
+    </noscript>
+
+    <header class="header" id="header">
+      <section>
+        <div class="logo" id="logo" data-before="&#x1F911; " data-after="Pay" onclick="'/'.router();"></div>
+        <div data-before="≡" onclick="document.body.dataset.menu=document.body.dataset.menu==='true'?document.body.removeAttribute('data-menu'):'true'">
+          <section>
+            <a onclick="'/about/'.router()">About</a>
+            <a onclick="'/services/'.router()">Services</a>
+            <a onclick="'/payment/'.router()">Payment</a>
+            <a onclick="'/contact/'.router()">Contact</a>
+          </section>
+        </div>
+      </section>
+    </header>
+
+    <main class="main" id="main">
+      <section data-page="/">
+        <div class="index-p1">
+          <header>Home</header>
+          <section>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo sed egestas egestas fringilla.<br>Blandit massa enim nec dui nunc mattis enim. In eu mi bibendum neque egestas congue quisque egestas. Morbi tristique senectus et netus et. Et tortor consequat id porta nibh venenatis cras sed felis. Malesuada pellentesque elit eget gravida cum sociis. Massa ultricies mi quis hendrerit dolor magna eget est. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing.<br> Aliquam ultrices sagittis orci a. Vitae aliquet nec ullamcorper sit amet risus nullam. Arcu odio ut sem nulla pharetra diam. Mi bibendum neque egestas congue quisque. Quis vel eros donec ac odio. Augue mauris augue neque gravida in fermentum et sollicitudin. Ut faucibus pulvinar elementum integer enim neque volutpat. Lorem sed risus ultricies tristique nulla aliquet enim tortor. Varius duis at consectetur lorem donec massa sapien faucibus et. Curabitur vitae nunc sed velit dignissim sodales ut. Fringilla urna porttitor rhoncus dolor.</section>
+        </div>
+      </section>
+      <section data-page="/about/">
+        <div class="index-p2">
+          <header>About</header>
+          <section>Enim nunc faucibus a pellentesque sit amet. Dolor sit amet consectetur adipiscing elit. Enim sit amet venenatis urna cursus. Facilisis leo vel fringilla est ullamcorper eget nulla. Duis at tellus at urna condimentum mattis pellentesque id. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer. Hendrerit gravida rutrum quisque non tellus orci ac. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Purus in massa tempor nec feugiat nisl pretium fusce id. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Tortor id aliquet lectus proin nibh nisl. Vivamus arcu felis bibendum ut tristique et egestas quis.</section>
+        </div>
+      </section>
+      <section data-page="/services/">
+        <div class="index-p3">
+          <header>Services</header>
+          <section>Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Sed arcu non odio euismod lacinia at quis risus. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Et leo duis ut diam quam nulla. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. A scelerisque purus semper eget duis. Risus in hendrerit gravida rutrum quisque non. Id cursus metus aliquam eleifend. Senectus et netus et malesuada. Eu ultrices vitae auctor eu augue ut lectus. Et netus et malesuada fames ac turpis egestas. Feugiat vivamus at augue eget. Arcu felis bibendum ut tristique et egestas.</section>
+        </div>
+      </section>
+      <section data-page="/payment/">
+        <header>
+          <section class="plans-addons"><!--
+            --><div class="plan">Donate</div><!--
+            !--><div class="plan">Upgrade</div><!--
+          --></section>
+        </header>
+        <section class="index-p2">
+          <header>
+            <div>Please Donate</div>
+            <div>Enim nunc faucibus a pellentesque sit amet. Dolor sit amet consectetur adipiscing elit. Enim sit amet venenatis urna cursus. Facilisis leo vel fringilla est ullamcorper eget nulla. Duis at tellus at urna condimentum mattis pellentesque id. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer. Hendrerit gravida rutrum quisque non tellus orci ac. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Purus in massa tempor nec feugiat nisl pretium fusce id. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Tortor id aliquet lectus proin nibh nisl. Vivamus arcu felis bibendum ut tristique et egestas quis.</div>
+          </header>
+          <footer class="plans-pricing"><!--
+            --><div class="plan">
+              <header>Forever</header>
+              <section>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Heart user icon based on Activity"></div>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Site supporter trophies on Achievements"></div>
+              </section>
+              <footer>Free</footer>
+            </div><!--
+            --><div class="plan">
+              <header>Plan</header>
+              <section>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Heart user icon forever"></div>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Site supporter trophy on profile"></div>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Subscriber bonsuses for 14 days (per 3$)"></div>
+              </section>
+              <footer>Basic</footer>
+            </div><!--
+            !--><div class="plan">
+              <header>Business</header>
+              <section>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Heart user icon forever"></div>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Site supporter trophy on profile"></div>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Subscriber bonsuses for 14 days (per 3$)"></div>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Stream up to 1080p"></div>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Customer user list icon"></div>
+                <div data-before="&#x2764;&#xFE0F;" data-after="Room owners dont timeout don't timeout due to inactivity"></div>
+              </section>
+              <footer>Limited</footer>
+            </div><!--
+            --><!--
+          --></footer>  
+        </section>
+      </section>
+      <section data-page="/contact/">
+        <form class="contact-us" id="contact-us">
+          <header>Contact Us</header>
+          <div data-before="Email"><input type="email"></div>
+          <div data-before="Subject / Topic"><input type="text"></div>
+          <div data-before="Category">
+            <section type="select">
+              <div data-value="Option 1"></div>
+              <div data-value="Option 2"></div>
+              <div data-value="Option 3"></div>
+              <div data-value="Option 4"></div>
+            </section>
+          </div>
+          <div data-before="Report Issues"><textarea></textarea></div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <section>
+        <div><a class="facebook"></a><a class="twitter"></a><a class="google"></a></div>
+        <div>© 2020 Example</div>
+      </section>
+    </footer>
+
+  </body>
+
+</html>

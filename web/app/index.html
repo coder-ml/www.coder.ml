@@ -1,0 +1,93 @@
+<html lang='en-US' title='OS | Coder'>
+
+<head>
+  <title>OS | Coder</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0'>
+  <meta http-equiv='Content-Type' content='text/html'; charset='UTF-8'>
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <meta name='apple-mobile-web-app-status-bar-style' content='#021025'>
+  <meta name="apple-mobile-web-app-title" content="Coder OS">
+  <meta name="application-name" content="Coder OS">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name='theme-color' content='#021025'>
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="47824486713-n6bf613gpdk21i0qmvl8fulv1v6s4iru.apps.googleusercontent.com">
+  <link rel='shortcut icon' href='/coder.ico'>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel='stylesheet' href='/index.css' type='text/css' media='screen'>
+  <script async src='/cdn/js/firebase-app.js'></script>
+  <script async src='/cdn/js/firebase-auth.js'></script>  
+  <script async src='/cdn/js/global.js'></script>
+  <script async src='/cdn/js/jpurey.js'></script>
+  <script async src='/cdn/js/auth.js'></script>
+  <script async src='/cdn/js/router.js'></script>  
+  <script async src='/cdn/js/touch.js'></script>  
+  <script async src='/index.js'></script>
+</head>
+
+  <body onload="init(window.location.pathname+window.location.hash)">
+
+    <noscript>
+      <div>Javascript Required</div>
+      <div>We're sorry, but MallZones doesn't work properly without JavaScript enabled. If you can't enable Javscript, try visiting our <a>optimized website</a></div>
+      <style>
+        body { background: #ff3b30; overflow: hidden; margin: 0; -webkit-font-smoothing: antialiased; }
+        noscript { border: 1px solid #bbb; padding: 10px; border-radius: 3px; position: absolute; top: 36px; left: 0; right: 0; bottom: 36px; width: calc(100% - 40px); height: 86px; margin: auto; background: whitesmoke; z-index: 999999999999999999999999; }
+        noscript div { height: 36px; font-weight: bolder; }
+        noscript div:first-child { line-height: calc(36px); font-family: Lato Regular; font-weight: bolder; font-size: 18px; }
+        noscript div:nth-child(2) { line-height: calc(50px/3); font-family: Lato Light; font-weight: bolder; font-size: 13px; }
+        [data-nojs] > :not(noscript) { display: none; }
+      </style>
+    </noscript>
+
+    <div id='login' class='login'>
+      <div id="splash" class="splash" onclick="'/login/'.router()">
+        <div id='clock' class='clock'>
+          <div id='time' class='time'>03:08</div>
+          <div id='date' class='date'>Sunday, May 19</div>
+        </div>
+      </div>
+      <div class='signin'>
+        <div class='overflow-x'>
+          <div class='connect ui' onclick="'/desktop/'.router()"></div>
+          <a id='fbLogIn' class="connect fb" href="/oauth/facebook"></a>
+          <div id='ggSignIn' class="connect gg" onclick="console.log(event.target.className); handleAuthClick();"></div>
+          <a id='ttConnect' class="connect tt" href="/oauth/twitter"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class='bkg'></div>
+
+    <div id='desktop' class='desktop blur' onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'>
+      <div class="ico" data-app="account" style="background-image:url(/url/png/ico/logo-account_50.png)"></div>
+      <div class="ico" data-app="builder" style="background-image:url(/url/png/ico/logo-builder_50.png)"></div>
+      <div class="ico" data-app="cloud" style="background-image:url(/url/png/ico/logo-cloud_50.png)"></div>
+      <div class="ico" data-app="market" style="background-image:url(/url/png/ico/logo-market_50.png)"></div>
+      <div class="ico" data-app="settings" style="background-image:url(/url/png/ico/logo-settings_50.png)"></div>
+    </div>
+
+    <footer id='taskbar' class='taskbar'>
+      <div id='start-button' class='start-button'></div>
+      <div id='tasks' class='tasks' onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'></div>
+      <div id='task-manager' class='task-manager'></div>
+    </footer>
+
+    <div id='start-menu' class='start-menu'>
+      <div id='access' class='access'>
+         <div id='fullscreen' class='fullscreen'></div>
+         <div id='avatar' class='avatar'></div>
+         <div id='explorer' class='explorer'></div>
+         <div id='settings' class='settings'></div>
+         <div id='power' class='power'></div>
+      </div>
+      <div id='apps' class='apps' onclick='openApp(event.target.dataset.app)'></div>
+    </div>
+
+  </body>
+
+</html>

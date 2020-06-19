@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang='en-US' title='Coder'><!--
+
+  --><head>
+    <title>Coder</title>    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="Description" content="A boilerplate library for web development.">
+    <meta name="theme-color" content="#fff">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="canonical" href="https://coder.ml.com"/>
+    <link async rel="stylesheet" href="/index.css" media="all">
+    <link async rel="stylesheet" href="/cdn/css/index.css" media="all">
+    <link async rel="stylesheet" href="/cdn/css/blog.css" media="all">
+    <link async rel="stylesheet" href="/cdn/css/article.css" media="all">
+    <script src='/cdn/js/jpurey.js'></script>
+    <script async src='/index.js'></script>
+    <script async src='/cdn/js/routes.js'></script>
+    <script async src='/cdn/js/router.js'></script>
+    <script async src='/cdn/js/touch.js'></script>
+    <script async src='/cdn/js.js'></script>
+    <style id="style"></style>
+  </head><!--
+
+  --><body id="body" data-load data-mode="dark" data-nojs onload="init(window.location.pathname+window.location.hash)"><!--
+
+    --><noscript>
+      <div>Javascript Required</div>
+      <div>We're sorry, but this application doesn't work properly without JavaScript enabled. If you can't enable Javscript, try visiting our <a>optimized website</a></div>
+      <style>
+        body { background: #ff3b30; overflow: hidden; margin: 0; -webkit-font-smoothing: antialiased; }
+        noscript { border: 1px solid #bbb; padding: 10px; border-radius: 3px; position: absolute; top: 36px; left: 0; right: 0; bottom: 36px; width: calc(100% - 40px); height: 86px; margin: auto; background: whitesmoke; z-index: 999999999999999999999999; }
+        noscript div { height: 36px; font-weight: bolder; }
+        noscript div:first-child { line-height: calc(36px); font-family: Lato Regular; font-weight: bolder; font-size: 18px; }
+        noscript div:nth-child(2) { line-height: calc(50px/3); font-family: Lato Light; font-weight: bolder; font-size: 13px; }
+        [data-nojs] > :not(noscript) { display: none; }
+      </style>
+    </noscript>
+
+    <header class="header" id="header">
+      <section>
+        <div class="logo" id="logo" data-before="&#x2328;&#xFE0F; " data-after="Coder" onclick="'/'.router();"></div>
+        <div data-before="≡" onclick="document.body.dataset.menu=document.body.dataset.menu==='true'?'false':'true'"></div>
+      </section>
+    </header>
+
+    <main class="main" id="main">
+      <section data-page="/">
+        <header class="flex">
+          <div>PWA Boilerplate</div>
+          <div>Web Application Framework</div>
+        </header>
+        <div class="index-p1"></div>
+        <div class="index-p2"></div>
+        <div class="index-p3"></div>
+      </section>
+      <section data-page="/blog/">
+        <header class="flex">
+          <section>
+            <div>Recent Posts</div>
+          </section>
+        </header>
+        <div class="blog-feed" id="blogs" onclick="event.target.closest('block').dataset.path.router()">
+          <block>
+            <section>
+              <header></header>
+              <section></section>
+              <footer></footer>
+            </section>
+          </block>
+          <block>
+            <section>
+              <header></header>
+              <section></section>
+              <footer></footer>
+            </section>
+          </block>
+          <block>
+            <section>
+              <header></header>
+              <section></section>
+              <footer></footer>
+            </section>
+          </block>
+          <block>
+            <section>
+              <header></header>
+              <section></section>
+              <footer></footer>
+            </section>
+          </block>
+          <block>
+            <section>
+              <header></header>
+              <section></section>
+              <footer></footer>
+            </section>
+          </block>
+          <block>
+            <section>
+              <header></header>
+              <section></section>
+              <footer></footer>
+            </section>
+          </block>
+          <block>
+            <section>
+              <header></header>
+              <section></section>
+              <footer></footer>
+            </section>
+          </block>
+        </div>
+      </section>
+      <section data-page="/blog/#/"></section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <section>
+        <div><a href="https://github.com/thebanon/www.coder.ml" target="_blank">Github</a></div>
+        <div onclick="'/blog/'.router()">Blog</div>
+        <div class="mode" onclick="change.mode()"></div>
+      </section>
+    </footer>
+
+  </body>
+
+</html>

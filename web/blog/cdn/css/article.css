@@ -1,0 +1,8 @@
+body[data-page="/blog/#/"] section[data-page="/blog/#/"] { display: block; }
+
+section[data-page="/blog/#/"] header {width: 100%;min-height: 480px;background: #111;justify-content: center;align-items: center;flex-direction: column;padding-bottom: 40px;}
+body[data-mode="lite"] section[data-page="/blog/#/"] header { background: #bbb; }
+section[data-page="/blog/#/"] header > :nth-child(1) {font-size: 60px;line-height: 72px;padding: 40px;width: 880px;max-width: calc(100% - 80px);}
+section[data-page="/blog/#/"] header > :nth-child(2) {font-size: 24px;line-height: 50px;padding: 40px;}
+
+section[data-page="/blog/#/"] .index-about {max-width: 960px;margin: auto;font-size: 24px;padding: 20px;}

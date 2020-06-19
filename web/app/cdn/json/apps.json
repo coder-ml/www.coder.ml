@@ -1,0 +1,21 @@
+[
+  ["browser", "Browser"],
+  ["builder", "Builder"],
+  ["calculator", "Calculator"],
+  ["calendar", "Calendar"],
+  ["camera", "Camera"],
+  ["chat", "Chat"],
+  ["cloud", "Cloud"],
+  ["mail", "Mail"],
+  ["market", "Market"],
+  ["messager", "Messager"],
+  ["music", "Music"],
+  ["notes", "Notes"],
+  ["photos", "Photos"],
+  ["reminders", "Reminders"],
+  ["settings", "Settings"],
+  ["stocks", "Stocks"],
+  ["videos", "Videos"],
+  ["voice", "Voice"],
+  ["weather", "Weather"]
+]
