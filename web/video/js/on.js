@@ -11,10 +11,13 @@ window.on['click'] = {
 
 window.on['scroll'] = {
 
-    feed: event => {
+    body: event => {
 
 
         console.log({event});
+        if(document.body.dataset.page === '/') { 
+
+        }
         
 
     }
@@ -32,7 +35,7 @@ window.on['load'] = url => {
           var key = block.index();
           var video = json.videos[x];
           var id = video.ytid, title = video.title, channel, views, ago;
-          console.log({video});
+          //console.log({video});
           var html = `<div class="picture" onclick="('/watch/`+id+`/').router()"><picture>`;
             html += `<!--
               --><source srcset="https://img.youtube.com/vi/`+id+`/0.jpg">
